@@ -1,12 +1,12 @@
 <?php
 
-namespace Ozq\MoodleClient\Exceptions;
+namespace Zhiru\LaravelMoodle\Exceptions;
 
 use Exception;
 
 /**
  * Class ApiException
- * @package Ozq\MoodleClient\Exceptions
+ * @package Zhiru\LaravelMoodle\Exceptions
  */
 class ApiException extends Exception
 {

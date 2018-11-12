@@ -1,10 +1,14 @@
 # MOODLE PHP CLIENT
 
+### This is a fork of [ozq/moodle-client](https://github.com/ozq/moodle-client)
+
+## In adaptation
+
 ## Installation
 The recommended way to install the library is through Composer:
 
 ```
-$ composer require ozq/moodle-client:dev-master
+$ composer require zhiru/laravel-moodle
 ```
  
 ## Usage

@@ -1,14 +1,14 @@
 <?php
 
-namespace Ozq\MoodleClient\Services;
+namespace Zhiru\LaravelMoodle\Services;
 
-use Ozq\MoodleClient\Clients\ClientAdapterInterface;
-use Ozq\MoodleClient\Entities\Entity;
+use Zhiru\LaravelMoodle\Clients\ClientAdapterInterface;
+use Zhiru\LaravelMoodle\Entities\Entity;
 use ReflectionClass;
 
 /**
  * Class Service
- * @package Ozq\MoodleClient\Services
+ * @package Zhiru\LaravelMoodle\Services
  */
 abstract class Service
 {

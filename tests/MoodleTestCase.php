@@ -1,13 +1,13 @@
 <?php
 
-namespace Ozq\MoodleClient\Tests;
+namespace Zhiru\LaravelMoodle\Tests;
 
-use Ozq\MoodleClient\Connection;
+use Zhiru\LaravelMoodle\Connection;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class MoodleTestCase
- * @package Ozq\MoodleClient\Tests
+ * @package Zhiru\LaravelMoodle\Tests
  */
 class MoodleTestCase extends TestCase
 {

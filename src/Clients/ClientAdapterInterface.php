@@ -1,10 +1,10 @@
 <?php
 
-namespace Ozq\MoodleClient\Clients;
+namespace Zhiru\LaravelMoodle\Clients;
 
 /**
  * Interface ClientAdapterInterface
- * @package Ozq\MoodleClient\Clients
+ * @package Zhiru\LaravelMoodle\Clients
  */
 interface ClientAdapterInterface
 {

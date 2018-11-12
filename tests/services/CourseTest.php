@@ -1,18 +1,18 @@
 <?php
 
-namespace Ozq\MoodleClient\Tests\Services;
+namespace Zhiru\LaravelMoodle\Tests\Services;
 
-use Ozq\MoodleClient\Clients\Adapters\RestClient;
-use Ozq\MoodleClient\Clients\ClientAdapterInterface;
-use Ozq\MoodleClient\Services\Course;
-use Ozq\MoodleClient\Tests\MoodleTestCase;
-use Ozq\MoodleClient\Entities\CourseCollection;
-use Ozq\MoodleClient\Entities\Dto\Course as CourseDto;
-use Ozq\MoodleClient\Entities\Course as CourseEntity;
+use Zhiru\LaravelMoodle\Clients\Adapters\RestClient;
+use Zhiru\LaravelMoodle\Clients\ClientAdapterInterface;
+use Zhiru\LaravelMoodle\Services\Course;
+use Zhiru\LaravelMoodle\Tests\MoodleTestCase;
+use Zhiru\LaravelMoodle\Entities\CourseCollection;
+use Zhiru\LaravelMoodle\Entities\Dto\Course as CourseDto;
+use Zhiru\LaravelMoodle\Entities\Course as CourseEntity;
 
 /**
  * Class CourseTest
- * @package Ozq\MoodleClient\Tests\Services
+ * @package Zhiru\LaravelMoodle\Tests\Services
  */
 class CourseTest extends MoodleTestCase
 {

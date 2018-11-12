@@ -1,10 +1,10 @@
 <?php
 
-namespace Ozq\MoodleClient\Entities;
+namespace Zhiru\LaravelMoodle\Entities;
 
 /**
  * Class SummaryFormatType
- * @package Ozq\MoodleClient\Entities
+ * @package Zhiru\LaravelMoodle\Entities
  */
 class SummaryFormatType
 {

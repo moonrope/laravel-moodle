@@ -1,14 +1,14 @@
 <?php
 
-namespace Ozq\MoodleClient\Services;
+namespace Zhiru\LaravelMoodle\Services;
 
-use Ozq\MoodleClient\Entities\Course as CourseItem;
-use Ozq\MoodleClient\Entities\Dto\Course as CourseDto;
-use Ozq\MoodleClient\Entities\CourseCollection;
+use Zhiru\LaravelMoodle\Entities\Course as CourseItem;
+use Zhiru\LaravelMoodle\Entities\Dto\Course as CourseDto;
+use Zhiru\LaravelMoodle\Entities\CourseCollection;
 
 /**
  * Class Course
- * @package Ozq\MoodleClient\Services
+ * @package Zhiru\LaravelMoodle\Services
  */
 class Course extends Service
 {
@@ -44,7 +44,7 @@ class Course extends Service
 
     /**
      * Create new course
-     * @param \Ozq\MoodleClient\Entities\Dto\Course[] ...$courses
+     * @param \Zhiru\LaravelMoodle\Entities\Dto\Course[] ...$courses
      * @return CourseCollection
      */
     public function create(CourseDto ...$courses)
