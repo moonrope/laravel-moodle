@@ -1,52 +1,38 @@
 <?php
-
 namespace Zhiru\LaravelMoodle;
 
+use Illuminate\Support\ServiceProvider;
 
-class LaravelModulesServiceProvider extends De
+/**
+ * Class LaravelMoodleServiceProvider
+ * @package Zhiru\LaravelMoodle
+ */
+class LaravelMoodleServiceProvider extends ServiceProvider
 {
     /**
-     * Booting the package.
+     * Bootstrap the application events.
+     *
+     * @return void
      */
     public function boot()
     {
-        $this->registerNamespaces();
-        $this->registerModules();
+        $configPath = __DIR__ . '/../config/laravel-moodle.php';
+        if (function_exists('config_path')) {
+            $publishPath = config_path('laravel-moodle.php');
+        } else {
+            $publishPath = base_path('config/laravel-moodle.php');
+        }
+        $this->publishes([$configPath => $publishPath], 'config');
     }
 
     /**
      * Register the service provider.
+     *
+     * @return void
      */
     public function register()
     {
-        $this->registerServices();
-        $this->setupStubPath();
-        $this->registerProviders();
-    }
-
-    /**
-     * Setup stub path.
-     */
-    public function setupStubPath()
-    {
-        Stub::setBasePath(__DIR__ . '/Commands/stubs');
-
-        $this->app->booted(function ($app) {
-            if ($app['modules']->config('stubs.enabled') === true) {
-                Stub::setBasePath($app['modules']->config('stubs.path'));
-            }
-        });
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function registerServices()
-    {
-        $this->app->singleton('modules', function ($app) {
-            $path = $app['config']->get('modules.paths.modules');
-
-            return new Laravel\LaravelFileRepository($app, $path);
-        });
+        $configPath = __DIR__ . '/../config/laravel-moodle.php';
+        $this->mergeConfigFrom($configPath, 'laravel-moodle');
     }
 }

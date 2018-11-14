@@ -15,8 +15,19 @@ use GuzzleHttp\Client as HttpClient;
  */
 class RestClient extends BaseAdapter
 {
+    /**
+     *
+     */
     const OPTION_FORMAT = 'moodlewsrestformat';
+
+    /**
+     *
+     */
     const RESPONSE_FORMAT_JSON = 'json';
+
+    /**
+     *
+     */
     const RESPONSE_FORMAT_XML = 'xml';
 
     /**
@@ -25,14 +36,21 @@ class RestClient extends BaseAdapter
     protected $responseFormat;
 
     /**
+     * @var string
+     */
+    protected $connection;
+
+    /**
      * RestClient constructor.
      * @param Connection $connection
      * @param string $responseFormat
      */
-    public function __construct(Connection $connection, $responseFormat = self::RESPONSE_FORMAT_JSON)
+    public function __construct()
     {
-        parent::__construct($connection);
-        $this->setResponseFormat($responseFormat);
+        $this->setResponseFormat(config('laravel-moodle.format'));
+        $this->setConnection(config('laravel-moodle.url'), config('laravel-moodle.token'));
+
+        parent::__construct($this->getConnection());
     }
 
     /**
@@ -49,12 +67,15 @@ class RestClient extends BaseAdapter
             self::OPTION_TOKEN    => $this->getConnection()->getToken(),
         ];
 
-        $response = $this->getClient()->post(null, ['body' => array_merge($configuration, $arguments)]);
+        $response = $this->getClient()->post(null, [
+            'form_params' => array_merge($configuration, $arguments)
+        ]);
+
         $this->handleException($response);
 
         $formattedResponse = $this->responseFormat === self::RESPONSE_FORMAT_JSON ?
-            $response->json() :
-            $response->xml();
+            json_decode($response->getBody(), true) :
+            simplexml_load_string($response->getBody());
 
         return $formattedResponse;
     }
@@ -65,8 +86,11 @@ class RestClient extends BaseAdapter
      */
     protected function buildClient()
     {
-        return new HttpClient(['base_url' => $this->getEndPoint()]);
-    }
+        return new HttpClient([
+            'base_url' => $this->getEndPoint(),
+            'base_uri' => $this->getEndPoint()
+        ]);
+}
 
     /**
      * Set response format
@@ -76,5 +100,22 @@ class RestClient extends BaseAdapter
     {
         Assertion::inArray($format, [self::RESPONSE_FORMAT_JSON, self::RESPONSE_FORMAT_XML]);
         $this->responseFormat = $format;
+    }
+
+    /**
+     * @return string|Connection
+     */
+    protected function getConnection()
+    {
+        return $this->connection;
+    }
+
+    /**
+     * @param $url
+     * @param $token
+     */
+    protected function setConnection($url, $token)
+    {
+        $this->connection = new Connection($url, $token);
     }
 }
