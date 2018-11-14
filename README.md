@@ -2,7 +2,7 @@
 
 ### This is a fork of [ozq/moodle-client](https://github.com/ozq/moodle-client)
 
-## In adaptation
+## In adaptation and Work in Progress
 
 ## Installation
 The recommended way to install the library is through Composer:
@@ -10,7 +10,7 @@ The recommended way to install the library is through Composer:
 ```
 $ composer require zhiru/laravel-moodle
 ```
- 
+
 ## Usage
 Create instance of connection with your moodle service: 
 ```php
