@@ -5,6 +5,8 @@ namespace Zhiru\LaravelMoodle\Clients;
 use Zhiru\LaravelMoodle\Connection;
 use Zhiru\LaravelMoodle\Exceptions\ApiException;
 use ReflectionClass;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 /**
  * Class BaseAdapter
@@ -108,8 +110,8 @@ abstract class BaseAdapter implements ClientAdapterInterface
     protected function handleException($response)
     {
         //TODO: convert response to array!
-
-        if (array_key_exists('exception', $response)) {
+        $resp = collect($response)->toArray();
+        if (array_key_exists('exception', $resp)) {
             throw new ApiException($response['errorcode'] . ': ' . $response['message']);
         }
     }
