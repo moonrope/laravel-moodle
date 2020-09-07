@@ -42,13 +42,15 @@ class RestClient extends BaseAdapter
 
     /**
      * RestClient constructor.
-     * @param Connection $connection
+     * @param String $url
+     * @param String $token
+     * @param String $format
      * @param string $responseFormat
      */
-    public function __construct()
+    public function __construct($url, $token, $format = 'json')
     {
-        $this->setResponseFormat(config('laravel-moodle.format'));
-        $this->setConnection(config('laravel-moodle.url'), config('laravel-moodle.token'));
+        $this->setResponseFormat($format);
+        $this->setConnection($url, $token);
 
         parent::__construct($this->getConnection());
     }
