@@ -2,7 +2,6 @@
     "name": "qlick/laravel-moodle",
     "description": "Laravel Moodle Client",
     "license": "MIT",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Nermin Elkasovic",
