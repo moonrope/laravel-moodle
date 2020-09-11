@@ -1,11 +1,12 @@
 <?php
-namespace Zhiru\LaravelMoodle;
+
+namespace Moonrope\LaravelMoodle;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class LaravelMoodleServiceProvider
- * @package Zhiru\LaravelMoodle
+ * @package Moonrope\LaravelMoodle
  */
 class LaravelMoodleServiceProvider extends ServiceProvider
 {

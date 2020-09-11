@@ -1,18 +1,18 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Tests\Services;
+namespace Moonrope\LaravelMoodle\Tests\Services;
 
-use Zhiru\LaravelMoodle\Clients\Adapters\RestClient;
-use Zhiru\LaravelMoodle\Clients\ClientAdapterInterface;
-use Zhiru\LaravelMoodle\Services\Course;
-use Zhiru\LaravelMoodle\Tests\MoodleTestCase;
-use Zhiru\LaravelMoodle\Entities\CourseCollection;
-use Zhiru\LaravelMoodle\Entities\Dto\Course as CourseDto;
-use Zhiru\LaravelMoodle\Entities\Course as CourseEntity;
+use Moonrope\LaravelMoodle\Clients\Adapters\RestClient;
+use Moonrope\LaravelMoodle\Clients\ClientAdapterInterface;
+use Moonrope\LaravelMoodle\Services\Course;
+use Moonrope\LaravelMoodle\Tests\MoodleTestCase;
+use Moonrope\LaravelMoodle\Entities\CourseCollection;
+use Moonrope\LaravelMoodle\Entities\Dto\Course as CourseDto;
+use Moonrope\LaravelMoodle\Entities\Course as CourseEntity;
 
 /**
  * Class CourseTest
- * @package Zhiru\LaravelMoodle\Tests\Services
+ * @package Moonrope\LaravelMoodle\Tests\Services
  */
 class CourseTest extends MoodleTestCase
 {
@@ -26,11 +26,11 @@ class CourseTest extends MoodleTestCase
      */
     protected $service;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
-        $this->client = new RestClient($this->getConnection());
+        $this->client = new RestClient($url = 'https://iklox.aulapharos.es', $token = '7fb6c5849187fae6c8051b08a9c76bc2');
         $this->service = new Course($this->client);
     }
 
