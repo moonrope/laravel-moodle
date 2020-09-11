@@ -27,12 +27,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Moonrope\\LaravelMoodle\\": "src/"
+      "moonrope\\LaravelMoodle\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Moonrope\\LaravelMoodle\\Tests\\": "tests/"
+      "moonrope\\LaravelMoodle\\Tests\\": "tests/"
     }
   }
 }
