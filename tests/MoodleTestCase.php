@@ -1,13 +1,13 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Tests;
+namespace Moonrope\LaravelMoodle\Tests;
 
-use Zhiru\LaravelMoodle\Connection;
+use Moonrope\LaravelMoodle\Connection;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class MoodleTestCase
- * @package Zhiru\LaravelMoodle\Tests
+ * @package Moonrope\LaravelMoodle\Tests
  */
 class MoodleTestCase extends TestCase
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Clients\Adapters;
+namespace Moonrope\LaravelMoodle\Clients\Adapters;
 
-use Zhiru\LaravelMoodle\Clients\BaseAdapter;
-use Zhiru\LaravelMoodle\Connection;
+use Moonrope\LaravelMoodle\Clients\BaseAdapter;
+use Moonrope\LaravelMoodle\Connection;
 use Assert\Assertion;
 use GuzzleHttp\Client as HttpClient;
 
 /**
  * Class RestClient
- * @package Zhiru\LaravelMoodle\Clients
+ * @package Moonrope\LaravelMoodle\Clients
  *
  * @method HttpClient getClient()
  */
@@ -92,7 +92,7 @@ class RestClient extends BaseAdapter
             'base_url' => $this->getEndPoint(),
             'base_uri' => $this->getEndPoint()
         ]);
-}
+    }
 
     /**
      * Set response format

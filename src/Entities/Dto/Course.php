@@ -1,12 +1,12 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Entities\Dto;
+namespace Moonrope\LaravelMoodle\Entities\Dto;
 
-use Zhiru\LaravelMoodle\Entities\Entity;
+use Moonrope\LaravelMoodle\Entities\Entity;
 
 /**
  * Class Course
- * @package Zhiru\LaravelMoodle\Entities\Dto
+ * @package Moonrope\LaravelMoodle\Entities\Dto
  */
 class Course extends Entity
 {

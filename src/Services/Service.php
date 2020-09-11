@@ -1,14 +1,14 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Services;
+namespace Moonrope\LaravelMoodle\Services;
 
-use Zhiru\LaravelMoodle\Clients\ClientAdapterInterface;
-use Zhiru\LaravelMoodle\Entities\Entity;
+use Moonrope\LaravelMoodle\Clients\ClientAdapterInterface;
+use Moonrope\LaravelMoodle\Entities\Entity;
 use ReflectionClass;
 
 /**
  * Class Service
- * @package Zhiru\LaravelMoodle\Services
+ * @package Moonrope\LaravelMoodle\Services
  */
 abstract class Service
 {

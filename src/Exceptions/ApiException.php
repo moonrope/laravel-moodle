@@ -1,12 +1,12 @@
 <?php
 
-namespace Zhiru\LaravelMoodle\Exceptions;
+namespace Moonrope\LaravelMoodle\Exceptions;
 
 use Exception;
 
 /**
  * Class ApiException
- * @package Zhiru\LaravelMoodle\Exceptions
+ * @package Moonrope\LaravelMoodle\Exceptions
  */
 class ApiException extends Exception
 {
