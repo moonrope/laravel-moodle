@@ -26,11 +26,11 @@ class CourseTest extends MoodleTestCase
      */
     protected $service;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
-        $this->client = new RestClient($this->getConnection());
+        $this->client = new RestClient($url = 'https://iklox.aulapharos.es', $token = '7fb6c5849187fae6c8051b08a9c76bc2');
         $this->service = new Course($this->client);
     }
 
