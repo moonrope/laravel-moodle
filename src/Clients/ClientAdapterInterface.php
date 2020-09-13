@@ -1,10 +1,10 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Clients;
+namespace moonrope\LaravelMoodle\Clients;
 
 /**
  * Interface ClientAdapterInterface
- * @package Moonrope\LaravelMoodle\Clients
+ * @package moonrope\LaravelMoodle\Clients
  */
 interface ClientAdapterInterface
 {

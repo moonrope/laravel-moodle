@@ -1,16 +1,16 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Clients;
+namespace moonrope\LaravelMoodle\Clients;
 
-use Moonrope\LaravelMoodle\Connection;
-use Moonrope\LaravelMoodle\Exceptions\ApiException;
+use moonrope\LaravelMoodle\Connection;
+use moonrope\LaravelMoodle\Exceptions\ApiException;
 use ReflectionClass;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 /**
  * Class BaseAdapter
- * @package Moonrope\LaravelMoodle\Clients
+ * @package moonrope\LaravelMoodle\Clients
  */
 abstract class BaseAdapter implements ClientAdapterInterface
 {

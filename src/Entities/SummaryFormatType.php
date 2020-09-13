@@ -1,10 +1,10 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Entities;
+namespace moonrope\LaravelMoodle\Entities;
 
 /**
  * Class SummaryFormatType
- * @package Moonrope\LaravelMoodle\Entities
+ * @package moonrope\LaravelMoodle\Entities
  */
 class SummaryFormatType
 {

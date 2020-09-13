@@ -1,14 +1,14 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Tests;
+namespace moonrope\LaravelMoodle\Tests;
 
-use Moonrope\LaravelMoodle\LaravelMoodleServiceProvider;
-use Moonrope\LaravelMoodle\Connection;
+use moonrope\LaravelMoodle\LaravelMoodleServiceProvider;
+use moonrope\LaravelMoodle\Connection;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class MoodleTestCase
- * @package Moonrope\LaravelMoodle\Tests
+ * @package moonrope\LaravelMoodle\Tests
  */
 class MoodleTestCase extends TestCase
 {

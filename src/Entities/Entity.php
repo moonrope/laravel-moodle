@@ -1,10 +1,10 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Entities;
+namespace moonrope\LaravelMoodle\Entities;
 
 /**
  * Class Entity
- * @package Moonrope\LaravelMoodle\Entities
+ * @package moonrope\LaravelMoodle\Entities
  */
 abstract class Entity
 {

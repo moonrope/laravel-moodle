@@ -1,18 +1,18 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Tests\Services;
+namespace moonrope\LaravelMoodle\Tests\Services;
 
-use Moonrope\LaravelMoodle\Clients\Adapters\RestClient;
-use Moonrope\LaravelMoodle\Clients\ClientAdapterInterface;
-use Moonrope\LaravelMoodle\Services\Course;
-use Moonrope\LaravelMoodle\Tests\MoodleTestCase;
-use Moonrope\LaravelMoodle\Entities\CourseCollection;
-use Moonrope\LaravelMoodle\Entities\Dto\Course as CourseDto;
-use Moonrope\LaravelMoodle\Entities\Course as CourseEntity;
+use moonrope\LaravelMoodle\Clients\Adapters\RestClient;
+use moonrope\LaravelMoodle\Clients\ClientAdapterInterface;
+use moonrope\LaravelMoodle\Services\Course;
+use moonrope\LaravelMoodle\Tests\MoodleTestCase;
+use moonrope\LaravelMoodle\Entities\CourseCollection;
+use moonrope\LaravelMoodle\Entities\Dto\Course as CourseDto;
+use moonrope\LaravelMoodle\Entities\Course as CourseEntity;
 
 /**
  * Class CourseTest
- * @package Moonrope\LaravelMoodle\Tests\Services
+ * @package moonrope\LaravelMoodle\Tests\Services
  */
 class CourseTest extends MoodleTestCase
 {
