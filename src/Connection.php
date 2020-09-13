@@ -1,12 +1,12 @@
 <?php
 
-namespace Moonrope\LaravelMoodle;
+namespace moonrope\LaravelMoodle;
 
 use Assert\Assertion;
 
 /**
  * Class Connection
- * @package Moonrope\LaravelMoodle
+ * @package moonrope\LaravelMoodle
  */
 class Connection
 {

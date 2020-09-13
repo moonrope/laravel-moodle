@@ -1,15 +1,15 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Clients\Adapters;
+namespace moonrope\LaravelMoodle\Clients\Adapters;
 
-use Moonrope\LaravelMoodle\Clients\BaseAdapter;
-use Moonrope\LaravelMoodle\Connection;
+use moonrope\LaravelMoodle\Clients\BaseAdapter;
+use moonrope\LaravelMoodle\Connection;
 use Assert\Assertion;
 use GuzzleHttp\Client as HttpClient;
 
 /**
  * Class RestClient
- * @package Moonrope\LaravelMoodle\Clients
+ * @package moonrope\LaravelMoodle\Clients
  *
  * @method HttpClient getClient()
  */

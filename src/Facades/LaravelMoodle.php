@@ -1,6 +1,6 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Facades;
+namespace moonrope\LaravelMoodle\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

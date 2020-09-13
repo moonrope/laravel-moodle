@@ -1,14 +1,15 @@
 <?php
 
-namespace Moonrope\LaravelMoodle\Services;
+namespace moonrope\LaravelMoodle\Services;
 
-use Moonrope\LaravelMoodle\Entities\Course as CourseItem;
-use Moonrope\LaravelMoodle\Entities\Dto\Course as CourseDto;
-use Moonrope\LaravelMoodle\Entities\CourseCollection;
+use moonrope\LaravelMoodle\Services\Service;
+use moonrope\LaravelMoodle\Entities\Course as CourseItem;
+use moonrope\LaravelMoodle\Entities\Dto\Course as CourseDto;
+use moonrope\LaravelMoodle\Entities\CourseCollection;
 
 /**
  * Class Course
- * @package Moonrope\LaravelMoodle\Services
+ * @package moonrope\LaravelMoodle\Services
  */
 class Course extends Service
 {
@@ -44,7 +45,7 @@ class Course extends Service
 
     /**
      * Create new course
-     * @param \Moonrope\LaravelMoodle\Entities\Dto\Course[] ...$courses
+     * @param \moonrope\LaravelMoodle\Entities\Dto\Course[] ...$courses
      * @return CourseCollection
      */
     public function create(CourseDto ...$courses)

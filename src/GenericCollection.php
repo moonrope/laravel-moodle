@@ -1,13 +1,13 @@
 <?php
 
-namespace Moonrope\LaravelMoodle;
+namespace moonrope\LaravelMoodle;
 
 use IteratorAggregate;
 use ArrayIterator;
 
 /**
  * Class GenericCollection
- * @package Moonrope\LaravelMoodle\Entities
+ * @package moonrope\LaravelMoodle\Entities
  */
 abstract class GenericCollection implements IteratorAggregate
 {
